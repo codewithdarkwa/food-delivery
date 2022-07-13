@@ -10,7 +10,7 @@ export default function Home(){
            <HeaderTabs />
            <SearchBar />
             </View>
-          <Categories />
+          <Categories/>
         </SafeAreaView>
     )
 }
