@@ -1,9 +1,12 @@
-import { View, Text } from 'react-native'
+import { View, Text,SafeAreaView } from 'react-native'
+import HeaderTabs from '../components/HeaderTabs'
 
-export default function HeaderTabs(){
+export default function Home(){
     return(
-        <View>
-            <Text>Home Screen</Text>
-        </View>
+        <SafeAreaView style={{backgroundColor:'#eee',flex: 1}}>
+            <View style={{backgroundColor:'#fff',padding:15}}>
+           <HeaderTabs />
+            </View>
+        </SafeAreaView>
     )
 }
