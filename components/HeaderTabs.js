@@ -31,7 +31,7 @@ export default function HeaderTabs(){
           paddingHorizontal:16,
           borderRadius:30
         }}>
-            <Text style={{color:activeTab===text ?'#fff':'#000',fontSize:16,fontWeight:900}}>{text}</Text>
+            <Text style={{color:activeTab===text ?'#fff':'#000',fontSize:16,fontWeight:"bold"}}>{text}</Text>
         </TouchableOpacity>
     </View>
  )

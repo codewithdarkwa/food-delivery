@@ -51,7 +51,7 @@ export default function Categories(){
             }}/>
             <Text style={{
                 fontSize:13,
-                fontWeight:900
+                fontWeight:'bold'
             }}>{item.text}</Text>
             </View>
             ))}
