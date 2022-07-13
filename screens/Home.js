@@ -10,9 +10,9 @@ const YELP_API_KEY = "T3KmNiUNLVKG9vQeiy16yr3-yShgQV728urB4CZsu2ttVLvv9gEZXlFpy2
 
 export default function Home(){
     const [restaurantData, setRestaurantData] = useState(localRestaurants)
-  console.log(restaurantData);
+    const [city, setCity] = useState('')
     const getRestaurantsFromYelp = () => {
-        const yelpUrl = "https://api.yelp.com/v3/businesses/search?term=restaurants&location=SanDiego"
+        const yelpUrl = "https://api.yelp.com/v3/businesses/search?term=restaurants&location=SanFrancisco"
         const apiOptions = {
             headers: {
               Authorization: `Bearer ${YELP_API_KEY}`,

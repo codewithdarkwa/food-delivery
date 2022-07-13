@@ -41,7 +41,7 @@ export default function RestaurantItems({restaurantData}){
     return(
         <TouchableOpacity activeOpacity={1} style={{marginBottom:30}}>
           {restaurantData.map((restaurant,index) =>(
-        <View key={index} style={{marginTop:10,padding:15, backgroundColor:'#fff'}}>
+        <View key={index} style={{marginTop:10,padding:10, backgroundColor:'#fff',margin:15,borderRadius:5}}>
            <RestaurantImage image={restaurant.image_url}/>
            <RestaurantInfo
            name={restaurant.name}
@@ -54,10 +54,10 @@ export default function RestaurantItems({restaurantData}){
 }
 
 const RestaurantImage = ({image}) =>(
-    <>
+    <View>
     <Image 
     source={{uri: image}}
-    style={{width:'100%', height:180}}
+    style={{width:'100%', height:200}}
     />
     <TouchableOpacity 
     style={{
@@ -67,7 +67,7 @@ const RestaurantImage = ({image}) =>(
         }}>
         <MaterialCommunityIcons name='heart-outline' size={25} color='#fff'/>
     </TouchableOpacity>
-    </>
+    </View>
 )
 
 const RestaurantInfo = ({name,rating}) =>(
