@@ -16,7 +16,7 @@ export default function About(props){
 }
 
 const RestaurantImage = ({image}) =>(
-    <Image source={{uri:image}} style={{width:'100%',height: 200}}/>
+    <Image source={{uri:image}} style={{width:'100%',height: 180}}/>
 )
 
 const RestaurantName = ({name}) =>(
@@ -25,7 +25,7 @@ const RestaurantName = ({name}) =>(
         fontSize:30,
         fontWeight: '600',
         marginTop:10,
-        marginHorizontal:15
+        marginHorizontal:15,
     }}
     >{name}</Text>
 )
