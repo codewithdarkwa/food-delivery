@@ -51,10 +51,11 @@ export default function MenuItem({restaurantName}){
         restaurantName:restaurantName,
         checkboxValue:checkboxValue
     }})
-     
+    
+
     return(
         <ScrollView showsVerticalScrollIndicator={false}>
-        {food.map((food,index)=>(
+        {food.map((food,index)=>( 
         <View key={index}>
         <View style={styles.menuStyle}>
         <BouncyCheckbox 
