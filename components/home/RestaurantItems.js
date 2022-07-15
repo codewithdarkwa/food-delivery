@@ -52,7 +52,7 @@ export default function RestaurantItems({navigation, ...props}){
           categories:restaurant.categories
         })}
         >
-        <View  style={{marginTop:10,padding:10, backgroundColor:'#fff',margin:15,borderRadius:5}}>
+        <View  style={{marginTop:5,padding:10, backgroundColor:'#fff',margin:10,borderRadius:5}}>
            <RestaurantImage image={restaurant.image_url}/>
            <RestaurantInfo
            name={restaurant.name}
@@ -69,7 +69,7 @@ const RestaurantImage = ({image}) =>(
     <View>
     <Image 
     source={{uri: image}}
-    style={{width:'100%', height:200}}
+    style={{width:'100%', height:200,borderRadius:10}}
     />
     <TouchableOpacity 
     style={{
