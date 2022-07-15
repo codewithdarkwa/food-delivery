@@ -1,6 +1,8 @@
 import {View,Text,TouchableOpacity,Modal,StyleSheet} from 'react-native';
 import {useSelector} from 'react-redux'
 import { useState } from 'react';
+import OrderItem from './OrderItem';
+
 
 export default function ViewCart(){
   const [modalVisible, setModalVisible] = useState(false)
@@ -53,12 +55,31 @@ export default function ViewCart(){
            <>
            <View style={styles.modalContainer}>
             <View style={styles.modalCheckoutContainer}>
-                <Text style={styles.restaurantName}>{restaurantName??'Restaurant name'}</Text>
-                <TouchableOpacity
-                style={{textAlign: 'center',top:150, backgroundColor:'#000',color:'#fff',padding:15,borderRadius:'100%'}}
-                onPress={() => setModalVisible(false)}>
-                    <Text style={{color:'#fff',textAlign:'center',fontSize:17}}>Checkout</Text>
-                </TouchableOpacity>
+                <Text style={styles.restaurantName}>{restaurantName}</Text>
+                {
+                  items.map((item, index)=>(
+                    <OrderItem key={index} item={item}/>
+                  ))
+                }
+                <View style={styles.subtotalContainer}>
+                  <Text style={styles.subtotalText}>Subtotal</Text>
+                  <Text>{totalUSD}</Text>
+                </View>
+                <View style={{flexDirection:"row",justifyContent: "center",}}>
+                    <TouchableOpacity style={{
+                        marginTop:20,
+                        backgroundColor:"#000",
+                        alignItems:"center",padding:13,
+                        borderRadius:30,
+                        position: "relative",
+                        width:300,
+                        }}
+                        onPress={()=>setModalVisible(false)}
+                        >
+                    <Text style={{color:'#fff',fontSize:20,}}>Checkout</Text>
+                    <Text style={{fontSize:15,color:'#fff',position:"absolute", right:20,top:17}}>{total?totalUSD:""}</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
            </View>
            </>
