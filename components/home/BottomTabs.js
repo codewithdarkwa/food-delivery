@@ -2,14 +2,35 @@ import {View,Text,TouchableOpacity} from 'react-native'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 
 export default function BottomTabs(){
+ 
+    const icons =[
+        {
+            icon:'home',
+            text:'Home',
+        },
+        {
+            icon:'search',
+            text:'Browse',
+        },
+        {
+            icon:'shopping-bag',
+            text:'Grocery',
+        },
+        {
+            icon:'receipt',
+            text:'Orders',
+        },
+        {
+            icon:'user',
+            text:'Account',
+        },
+  ]
 
     return(
         <View style={{flexDirection:"row",margin:10,marginHorizontal:30,justifyContent:'space-between',}}>
-            <Icon icon="home" text="Home" />
-            <Icon icon="search" text="Browse" />
-            <Icon icon="shopping-bag" text="Grocery" />
-            <Icon icon="receipt" text="Orders" />
-            <Icon icon="user" text="Account" />
+        {icons.map((icon,i)=>(
+            <Icon key={i} {...icon}/>
+        ))}
         </View>
     )
 }
