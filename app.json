@@ -1,10 +1,12 @@
 {
   "expo": {
-    "name": "food-delivery-app",
-    "slug": "food-delivery-app",
+    "name": "food-delivery",
+    "slug": "food-delivery",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/food-delivey.png",
+    "privacy": "public",
+    "description":"A food delivey app for your orders 😊",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
