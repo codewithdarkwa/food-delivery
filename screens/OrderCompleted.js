@@ -56,11 +56,11 @@ export default function OrderCompleted() {
         }}
       >
         <LottieView
-          style={{ height: 100, alignSelf: "center", marginBottom: 30 }}
+          style={{ height: 100, alignSelf: "center",marginBottom:30 }}
           source={require("../assets/animations/check-mark.json")}
           autoPlay
-          speed={0.5}
-          loop={false}
+          speed={0.3}
+          loop
         />
         <Text style={{ fontSize: 20, fontWeight: "bold" }}>
           Your order at {restaurantName} has been placed for {totalUSD}
@@ -75,7 +75,9 @@ export default function OrderCompleted() {
             style={{ height: 200, alignSelf: "center" }}
             source={require("../assets/animations/cooking.json")}
             autoPlay
-            speed={0.5}
+            speed={0.4}
+            loop
+
           />
         </ScrollView>
       </View>
