@@ -47,8 +47,7 @@ export default function OrderCompleted() {
   }, []);
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
-      {/* green checkmark */}
+    <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>  
       <View
         style={{
           margin: 15,
