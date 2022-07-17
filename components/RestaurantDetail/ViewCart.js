@@ -39,41 +39,7 @@ export default function ViewCart({ navigation }) {
       });
   };
 
-  const styles = StyleSheet.create({
-    modalContainer: {
-      flex: 1,
-      justifyContent: "flex-end",
-      backgroundColor: "rgba(0,0,0,0.7)",
-    },
-
-    modalCheckoutContainer: {
-      backgroundColor: "white",
-      padding: 16,
-      height: 500,
-      borderWidth: 1,
-    },
-
-    restaurantName: {
-      textAlign: "center",
-      fontWeight: "600",
-      fontSize: 18,
-      marginBottom: 10,
-    },
-
-    subtotalContainer: {
-      flexDirection: "row",
-      justifyContent: "space-between",
-      marginTop: 15,
-    },
-
-    subtotalText: {
-      textAlign: "left",
-      fontWeight: "600",
-      fontSize: 15,
-      marginBottom: 10,
-    },
-  });
-
+  
   const checkoutModalContent = () => {
     return (
       <>
@@ -122,7 +88,7 @@ export default function ViewCart({ navigation }) {
       </>
     );
   };
-
+  
   return (
     <>
       <Modal
@@ -130,18 +96,17 @@ export default function ViewCart({ navigation }) {
         visible={modalVisible}
         transparent={true}
         onRequestClose={() => setModalVisible(false)}
-      >
+        >
         {checkoutModalContent()}
       </Modal>
       {total ? (
         <View
-          style={{
+        style={{
             flex: 1,
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "row",
             position: "absolute",
-            // bottom:0,
             top:620,
             zIndex: 999,
           }}
@@ -152,7 +117,7 @@ export default function ViewCart({ navigation }) {
               justifyContent: "center",
               width: "100%",
             }}
-          >
+            >
             <TouchableOpacity
               style={{
                 marginTop: 20,
@@ -165,7 +130,7 @@ export default function ViewCart({ navigation }) {
                 position: "relative",
               }}
               onPress={() => setModalVisible(true)}
-            >
+              >
               <Text style={{ color: "white", fontSize: 20, marginRight: 30 }}>
                 View Cart
               </Text>
@@ -178,8 +143,8 @@ export default function ViewCart({ navigation }) {
       )}
       {loading ? (
         <View
-          style={{
-            backgroundColor: "black",
+        style={{
+          backgroundColor: "black",
             position: "absolute",
             opacity: 0.6,
             justifyContent: "center",
@@ -201,3 +166,38 @@ export default function ViewCart({ navigation }) {
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  modalContainer: {
+    flex: 1,
+    justifyContent: "flex-end",
+    backgroundColor: "rgba(0,0,0,0.7)",
+  },
+
+  modalCheckoutContainer: {
+    backgroundColor: "white",
+    padding: 16,
+    height: 500,
+    borderWidth: 1,
+  },
+
+  restaurantName: {
+    textAlign: "center",
+    fontWeight: "600",
+    fontSize: 18,
+    marginBottom: 10,
+  },
+
+  subtotalContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 15,
+  },
+
+  subtotalText: {
+    textAlign: "left",
+    fontWeight: "600",
+    fontSize: 15,
+    marginBottom: 10,
+  },
+});
