@@ -47,7 +47,7 @@ export default function RestaurantItems({ navigation, ...props }) {
               price: restaurant.price,
               reviews: restaurant.review_count,
               rating: restaurant.rating,
-              categories: restaurant.categories,
+              categories: restaurant.categories, 
             })
           }
         >
