@@ -14,7 +14,7 @@ export default function OrderItem({ item }) {
       }}
     >
       <Text style={{ fontWeight: "600", fontSize: 16 }}>{title}</Text>
-      <Text style={{ opacity: 0.7, fontSize: 16 }}>{price}</Text>
+      <Text style={{ opacity: 0.5, fontSize: 16 }}>{price}</Text>
     </View>
   );
 }
