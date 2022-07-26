@@ -59,7 +59,7 @@ export default function OrderCompleted() {
           style={{ height: 100, alignSelf: "center",marginBottom:30 }}
           source={require("../assets/animations/check-mark.json")}
           autoPlay
-          speed={0.5}
+          speed={0.3}
           loop
         />
         <Text style={{ fontSize: 20, fontWeight: "bold" }}>
